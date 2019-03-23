@@ -781,7 +781,16 @@ main {
 	-ms-flex-flow: row wrap;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	flex-flow: row wrap
+	/* flex-flow: row wrap */
+	flex-flow: row;
+	overflow-x: scroll;
+	overflow-y: overlay;
+}
+
+@media only screen and (min-width:37.5rem) {
+	.flex-grid {
+		overflow-x: hidden;
+	}
 }
 
 .title-category {
@@ -912,7 +921,8 @@ main {
 
 .box-item .box-body img {
 	width: 100%;
-	height: auto;
+	height: 180px;
+	object-fit: cover;
 	margin: 0 auto;
 	-webkit-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out
