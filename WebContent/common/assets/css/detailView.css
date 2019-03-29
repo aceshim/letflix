@@ -1,0 +1,51 @@
+#imageSlide.fullscreen {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 300;
+}
+#imageSlide {
+  height: 45vh;
+}
+
+#fullscreenIcon {
+  fill: white;
+  float:right;
+  cursor: pointer;
+  transition: transform 0.3s;
+  position: relative;
+  top: 40px;
+}
+
+#fullscreenIcon:hover {
+  transform: scale(1.2);
+}
+
+#fullscreenIcon.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 400;
+  fill: black;
+}
+.product__star {
+  float: right;
+  position: relative;
+  top: 40px;
+  right: 60px;
+}
+.product__star polygon {
+  stroke: #E50914;
+  fill: transparent;
+  transition: fill .3s ease-in-out;
+}
+.product__star rect {
+  transform: translateY(100%);
+  fill: #E50914;
+  transition: transform .3s ease-in-out;
+}
+.product__star:hover rect, .product__star.product__star--active rect {
+  transform: translateY(0);
+  fill: #E50914;
+}
